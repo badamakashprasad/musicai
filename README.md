@@ -1,10 +1,10 @@
 # musicai
-#This python program will automatically download latest songs in your desktop
-I am starting it by web crawling 'songs.pk'
-We need to make a directory named 'songspk_single' on the same folder where is main_prog.py
+#This python program will automatically download latest songs in your desktop\n
+I am starting it by web crawling 'songs.pk'\n
+We need to make a directory named 'songspk_single' on the same folder where is main_prog.py\n
 Modules used are:-
-1.requests
-2.bs4 //modified version of BeautifulSoup module
-3. urllib
-4.os.path
+(requests
+,bs4--modified version of BeautifulSoup module--,
+,urllib,
+os.path)\n
 Contribute and have fun.  
