@@ -55,21 +55,25 @@ class bollywood(YoutubeDownloader):
             ls = []
         latest = "https://www.youtube.com/user/tseries/videos?view=0&sort=dd&flow=list"
         prefix = "https://www.youtube.com"
+        pattern = ".*Teaser.*|.*Dialogue.*|.*Trailer.*|.*Making of.*|.*Full Album.*|.*Cover.*|.*Lyrical.*|.*LYRICAL.*|.*Remix.*|.*Mixtape.*|.*Making of.*|.*Jukebox.*|.*Jukebox.*|.*Episode.*|.*Interview.*"
         spath = "J:\\python_projects\\ScreenAutomate\\T-series\\video"
         dpath = "J:\\python_projects\\ScreenAutomate\\T-series\\audio"
         txt = requests.get(latest).text
         soup = BeautifulSoup(txt, "html.parser")
         for i in soup.find_all("h3", {"class": "yt-lockup-title"}):
-            url = prefix + i.find('a').get('href')
-            t = super().update_list(url, ls)
-            if t:
-                name = super().download_youtube(url=url, path=spath)
-                if name:
-                    super().convert_audio(name, dpath)
-                ls = t
-                f = open('tseries', 'wb')
-                pickle.dump(ls, f)
-                f.close()
+            name = i.text
+            if not (re.search(pattern,name)):
+                print(i.text)
+                url = prefix + i.find('a').get('href')
+                t = super().update_list(url, ls)
+                if t:
+                    name = super().download_youtube(url=url, path=spath)
+                    if name:
+                        super().convert_audio(name, dpath)
+                    ls = t
+                    f = open('tseries', 'wb')
+                    pickle.dump(ls, f)
+                    f.close()
 
 
 class English(YoutubeDownloader):
