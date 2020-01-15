@@ -1,7 +1,13 @@
-# musicai
+# MusicAI
 This python program will automatically download latest songs in your desktop.
 
-I am starting it by web crawling 'songs.pk'.
 
-We need to make a directory named 'songspk_single' on the same folder where main_prog.py is.
+**Recuirement Modules**
+-
+[Pytube](https://python-pytube.readthedocs.io/en/latest/)
 
+[BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+[Requests](https://requests.readthedocs.io/en/master/)
+
+[MoviePy](https://zulko.github.io/moviepy/)
