@@ -2,7 +2,7 @@
 This python program will automatically download latest songs in your desktop.
 
 
-**Recuirement Modules**
+**Requirement Modules**
 -
 [Pytube](https://python-pytube.readthedocs.io/en/latest/)
 
@@ -11,3 +11,10 @@ This python program will automatically download latest songs in your desktop.
 [Requests](https://requests.readthedocs.io/en/master/)
 
 [MoviePy](https://zulko.github.io/moviepy/)
+
+
+**Application**
+-
+Will download all top 100 billboard audio and video songs from youtube
+
+Will download all T Series uploaded Bollywood audio and video songs from youtube  
